@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+:root {
+  --color-primary: #06B6D4;
+  --color-primary-mid: #3B82F6;
+  --color-primary-dark: #1E40AF;
+
+  --color-indigo: #2563EB;
+  --color-indigo-light: #60A5FA;
+
+  --color-accent: #8AB4F8;
+
+  --color-background: #FFFFFF;
+  --color-card: rgba(255, 255, 255, 0.0);
+  --color-text: #0D0D0D;
+}
+
+
+:root.dark {
+  --color-background: #0B1120;
+  --color-card: rgba(17, 17, 27, 0.35);  /* frosted transparent dark */
+  --color-text: #E4E4E7;
+
+  --dark-bg: #0B1120;
+  --dark-card: rgba(17, 17, 27, 0.35);
+  --dark-text: #E4E4E7;
+  --dark-border: #1F2937;
+  --dark-muted: #9CA3AF;
+}
+
+
+
+/* Glow utility for logo / buttons / cards */
+.glow {
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.7);   /* blue glow (#3B82F6) */
+}
+
+/* Stronger cyan-blue glow (optional extra class) */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.75);   /* cyan glow (#06B6D4) */
+}
+
