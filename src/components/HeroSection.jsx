@@ -18,9 +18,6 @@ const HeroSection = () => {
     else setJd(file);
   };
 
-  // -------------------------------------
-  // 1️⃣ MATCH ANALYSIS
-  // -------------------------------------
   const analyze = async () => {
     if (!resume || !jd) {
       alert("Please upload both Resume & JD.");
@@ -52,9 +49,7 @@ const HeroSection = () => {
     setLoading(false);
   };
 
-  // -------------------------------------
-  // 2️⃣ GENERATE EMAIL
-  // -------------------------------------
+  
   const generateEmail = async () => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -86,9 +81,6 @@ const HeroSection = () => {
     setLoading(false);
   };
 
-  // -------------------------------------
-  // 3️⃣ GENERATE COVER LETTER
-  // -------------------------------------
   const generateCoverLetter = async () => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -120,9 +112,6 @@ const HeroSection = () => {
     setLoading(false);
   };
 
-  // -------------------------------------
-  // 4️⃣ RESUME SUGGESTIONS
-  // -------------------------------------
   const viewSuggestions = async () => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -153,9 +142,6 @@ const HeroSection = () => {
     setLoading(false);
   };
 
-  // -------------------------------------
-  // 5️⃣ SKILLS SUMMARY
-  // -------------------------------------
   const showSkillSummary = (type) => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -305,21 +291,32 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* SKILLS SUMMARY */}
         <div className="p-6 bg-card rounded-xl border shadow-xl">
-          <h3 className="font-bold mb-3">Skills Summary</h3>
+  <h3 className="font-bold mb-3">Skills Summary</h3>
 
-          <select
-            onChange={(e) => showSkillSummary(e.target.value)}
-            className="w-full p-3 rounded-md border"
-          >
-            <option>Resume Skills</option>
-            <option>JD Skills</option>
-            <option>Matching Skills</option>
-            <option>Missing Skills</option>
-            <option>Key Strengths</option>
-          </select>
-        </div>
+  <select
+    onChange={(e) => showSkillSummary(e.target.value)}
+    className="
+      w-full 
+      p-3 
+      rounded-md 
+      border 
+      mb-4 
+      bg-white 
+      dark:bg-dark-card 
+      cursor-pointer 
+      hover:shadow-md 
+      transition
+    "
+  >
+    <option>Resume Skills</option>
+    <option>JD Skills</option>
+    <option>Matching Skills</option>
+    <option>Missing Skills</option>
+    <option>Key Strengths</option>
+  </select>
+</div>
+
       </div>
 
       {/* ---------------------------------- OUTPUT PANEL ---------------------------------- */}
@@ -339,4 +336,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
