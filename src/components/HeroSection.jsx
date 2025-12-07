@@ -18,6 +18,9 @@ const HeroSection = () => {
     else setJd(file);
   };
 
+  // -------------------------------------
+  // 1️⃣ MATCH ANALYSIS
+  // -------------------------------------
   const analyze = async () => {
     if (!resume || !jd) {
       alert("Please upload both Resume & JD.");
@@ -49,6 +52,9 @@ const HeroSection = () => {
     setLoading(false);
   };
 
+  // -------------------------------------
+  // 2️⃣ GENERATE EMAIL
+  // -------------------------------------
   const generateEmail = async () => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -80,6 +86,9 @@ const HeroSection = () => {
     setLoading(false);
   };
 
+  // -------------------------------------
+  // 3️⃣ GENERATE COVER LETTER
+  // -------------------------------------
   const generateCoverLetter = async () => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -111,6 +120,9 @@ const HeroSection = () => {
     setLoading(false);
   };
 
+  // -------------------------------------
+  // 4️⃣ RESUME SUGGESTIONS
+  // -------------------------------------
   const viewSuggestions = async () => {
     if (!analysis) return alert("Run analysis first.");
 
@@ -141,6 +153,9 @@ const HeroSection = () => {
     setLoading(false);
   };
 
+  // -------------------------------------
+  // 5️⃣ SKILLS SUMMARY
+  // -------------------------------------
   const showSkillSummary = (type) => {
     if (!analysis) return alert("Run analysis first.");
 
