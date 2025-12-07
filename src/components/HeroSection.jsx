@@ -26,17 +26,19 @@ const HeroSection = () => {
     formData.append("job_description", jd);
 
     try {
-      const res = await fetch("http://localhost:8000/api/v1/match", {
-        method: "POST",
-        body: formData,
-      });
+  const API_URL = import.meta.env.VITE_API_URL || "https://email-backend-vmlo.onrender.com";
 
-      const data = await res.json();
-      setResult(data);
-    } catch (err) {
-      console.error(err);
-      alert("Backend not running!");
-    }
+  const res = await fetch(`${API_URL}/api/v1/match`, {
+    method: "POST",
+    body: formData,
+  });
+
+  const data = await res.json();
+  setResult(data);
+} catch (err) {
+  console.error(err);
+  alert("Unable to reach backend!");
+}
 
     setLoading(false);
   };
@@ -249,3 +251,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
