@@ -311,7 +311,7 @@ const HeroSection = () => {
 
           <select
             onChange={(e) => showSkillSummary(e.target.value)}
-            className="w-full p-3 rounded-full border bg-white shadow-md hover:shadow-xl transition cursor-pointer font-semibold"
+            className="w-full p-3 rounded-md border"
           >
             <option>Resume Skills</option>
             <option>JD Skills</option>
@@ -339,3 +339,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
